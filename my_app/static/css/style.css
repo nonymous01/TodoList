@@ -1,0 +1,51 @@
+#id_titre{
+    width: 30%;
+    height: 50px;
+    left: 3%;
+    position: relative;
+    justify-content: center;
+    color: orangered;
+}
+body{
+    margin: 0;
+    padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont{
+    background-color: rgb(65, 70, 69);
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 350px;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+    top: 80px;
+}
+button{
+    width: 20%;
+    color: black;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    left: 6%;
+    position: relative;
+}
+label{
+    width: 30%;
+    height: 50px;
+    color: white;
+    justify-content: center;
+}
+.redd a{
+    color: white;
+    text-decoration: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
