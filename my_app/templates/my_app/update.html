@@ -12,9 +12,15 @@
         <div class="cont">
             {% csrf_token %}
             {{form.as_p}}
-            <button type="submit">Ajouter</button>
-            <td class="redd"><a href="{% url 'list_view' %}" class="supprimer">voir la list</a></td>
+            <button type="submit">Enregistrer la Tache</button>
+            
+            <td class="redd"></td>
+            
+
+            <div class="voir"><a href="{% url 'list_view'  %}" >voir la liste</a></div>
+
         </div>
+
     </form>
 
 </body>
