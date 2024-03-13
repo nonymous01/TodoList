@@ -1,0 +1,121 @@
+
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href=" {% static 'css/blog.css' %} ">
+</head>
+<body>
+            <div class="nav1">
+                <div class="element1"><p>YS‿BLOG</p><strong> <a href="" id="affich"></a></strong></div>
+                <div class="element2">
+                    <div class="bergb">
+                        <input type="checkbox" id="berg">
+                        <label for="berg"><img src="{% static 'auth_app/image/blog.css' %} "  alt=""></label>
+                        <div class="hgfd">
+                            <ul>
+                                <li ><a href="./login" >DECONNEXION</a></li>
+                                <li ><a href="" >ACCUEIL</a></li>
+                                <li ><a href="./admin">PROFIL</a></li>
+                                <li><a href="./image">myblog</a></li>
+                                <li><a href="#azer">CATEGORIE</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                  
+                    <ul class="dd">                     
+                        <li><a href="{% url 'blog' %}">ACCUEIL</a></li>
+                        <li><a href="#apropos">A PROPOS</a></li>
+                        <li><a href="{% url 'blog' %}">DECONNEXION</a></li>
+                        <li><a href="{% url 'list_view' %}">Mes Postes</a></li>
+                        <li><a href="{% url 'blog' %}">myblog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <header>
+                
+
+
+            
+
+                <div class="full">
+                    <div class="bag" style="background-color: #994900;">
+                        <p>                      
+                                Le blog est un outil qui permet de développer l'interactivité sur votre site. <br> Vous pouvez vous exprimer en publiant des articles sur des sujets que vous maîtrisez <br> et vous pouvez donner la parole aux internautes, en les invitant à <br> laisser des commentaires sur vos articles. </p>
+                        </div>
+                        <div class="vide"></div>
+                        <div class="orange">
+                            
+                        </div>
+                        </div>
+                        <div class="image_cont">
+                             <img src="https://blog.lesjeudis.com/wp-content/uploads/2019/09/developper-ma-carriere-informatique-sans-bugs-1600-800x379.jpg" alt=""> 
+                        </div>
+                        <div class="image_txt"style="background-color: #000000;">
+                            <h2>BIENVENUE!</h2> <br><br><br>
+                            <h4 >
+                                Le blog est un outil qui permet de développer l'interactivité sur votre site. Vous pouvez vous exprimer en publiant des articles sur des sujets que vous maîtrisez et vous pouvez donner la parole aux internautes, en les invitant à laisser des commentaires sur vos articles.</h4>
+                                    {% if 'user_name' in session %}
+                                <div class="but"><a href=" "> USERNAME </a></div>
+                                    {% endif %}
+                        </div>
+                </div>
+                    
+
+               <div class="tect1" ><h3 class="HACKING"  id="hack">MY BLOG</h3></div>
+             for data in ajout 
+               <div class="collect1">
+                    <div class="block">
+                        <div class="l1">
+                            <form action="/panier_ajoute" method="post">
+                                <div class="ll">                   
+                                    <button type="submit" style=" width: 100%; border: none; color:white;  background-color: #000000;">
+                                        {{data.prix}}
+                                        <input type="text" name="prix" id="" value="{{data.prix}}" style="width: 0px; height: 0px; display: none;">
+
+                                    </button  >
+                                </div>                              
+                                <div class="ll2">
+                                    <div class="doc">{{data.name}}NAME</div>
+                                    VFDTR
+                                        <input type="text" name="name" id="" value="{{data.name}}" style="width: 0px; height: 0px;display: none;">                                                                                 
+                                    </div>
+                                </div>
+                            </form>                           
+                        </div>                     
+                    </div>
+                </div> 
+            <endfor 
+            
+
+            <div class="footer" id="footer">
+                <div class="foot1">
+                    <p>
+                        APPELEZ NOUS <br><br>
+                        222333333 <br><br>
+                        COURRIER <br> <br>
+                  info@youssef.com <br> <br>
+                             LIEU <br> <br>
+                       LA, CALIFORNI
+                    </p>
+                </div>
+                <div class="foot2" id="apropos">
+                    <form action="" method="post">
+                        <input type="text" name="name" id="" placeholder="nom"><br>
+                        <input type="email" name="email" id="" placeholder="e-mail"><br>
+                        <textarea name= "message" id="" cols="30" rows="10"  placeholder="votre message"></textarea>
+                        <button class="button">envoie</button>
+                    </form>
+                </div>
+                <div class="foot3">
+                    <button class="button1"><a href="{{'logout'}}" style="color: white; text-decoration: none;">DECONNEXION</a></button>
+                </div>
+               </div>
+            </header>
+            
+
+</body>
+</html>

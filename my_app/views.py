@@ -10,13 +10,17 @@ def add_user(request):
     if form.is_valid():
         form.save()
     context['form']=form
-    return render(request, "index.html", context)
+    return render(request, "my_app/index.html", context)
 
 #afficher la liste
 def list_view(resquest):
     context={}
     context["datas"]=Article.objects.all()
-    return render(resquest, "list.html" ,context)
+    return render(resquest, "my_app/list.html" ,context)
+def blog(request):
+    context={}
+    context["datas"]=Article.objects.all()
+    return render(request, "my_app/blog.html",context)
 
 #delete
 def delete(request,id):
@@ -24,7 +28,7 @@ def delete(request,id):
     context["datas"]=Article.objects.all()
     rm = Article.objects.get(id=id)
     rm.delete()
-    return render(request, "list.html" ,context)
+    return render(request, "my_app/list.html" ,context)
 
 
 #updete
@@ -37,6 +41,6 @@ def update(request,id):
     up.titre = str(form["titre"].value())
     up.save()
     context["form"]=form
-    return render(request, "update.html",context)
+    return render(request, "my_app/update.html",context)
     
 

@@ -7,5 +7,6 @@ class ActicleForm(forms.ModelForm):
         model=Article
         fields=[
             "titre",
-            "description"
+            "description",
+            "status"
         ]
